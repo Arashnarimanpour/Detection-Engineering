@@ -4,7 +4,7 @@ description: Detects Obfuscated Powershell via use MSHTA in Scripts
 
 ### First Format of Query With SYSMON 
 ```
-index=sysmon dest="soc-test01.zarin.local" EventCode=1
+index=sysmon EventCode=1
 CommandLine="*set*"
 CommandLine IN ("*&&*", "*&amp;&amp*")
 CommandLine="*mshta*"
@@ -24,7 +24,7 @@ CommandLine="*(window.close)*"
 
 ### Second Format of Query With DataModel 
 ```
-index=sysmon dest="soc-test01.zarin.local" EventCode=1
+index=sysmon EventCode=1
 CommandLine="*set*"
 CommandLine IN ("*&&*", "*&amp;&amp*")
 CommandLine="*mshta*"
